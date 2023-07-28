@@ -1,0 +1,91 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 30px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25);
+    width: 95%;
+    height: 80px;
+    border-radius: 13px;
+    position:fixed;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 999;
+}
+.navbar-logo{
+            color: aquamarine;
+            font-size: 2rem;
+            cursor: pointer; 
+}
+.navbar-menu{   
+            display: grid;
+                 grid-template-columns: repeat(4, auto);
+                 grid-gap: 10px;
+                 list-style: none;
+                 align-items: center;
+                 transition: 0.3s ease-in-out;
+}
+.nav-links{
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: 500 ;
+    white-space: nowrap;
+    padding: 0.7rem 1rem;
+}
+.nav-links i{
+            padding-right:8px ;
+
+}
+.nav-links:hover{
+    background-color: #01959a;
+    color:aliceblue; 
+    transition: all 0.2s ease-in-out ;
+}
+.menu-icon{
+    display: none;
+}
+@media screen and (max-width:850px){
+    .Navbar{
+        z-index: 99;
+    }
+    .navbar-menu{   
+        display: flex;
+           flex-direction:  column;
+           justify-content: flex-start;
+           background: gainsboro;
+           height: auto;
+           width: 100%;
+           top: 0;
+           left: -100%;
+           position: absolute;
+           opacity: 0;
+           padding: 80px 0 30px 0;
+           align-items: stretch;
+           margin: 0;
+           transition: 0.3s ease-in-out;
+           border-radius: 13px;
+           
+}
+.navbar-menu.active{
+left: 0;
+opacity: 1;
+z-index: -1 ;
+transition: 0.3s ease-in-out;
+}
+.nav-links{
+    display: block;
+    width: 100%;
+    font: 1.2em sans-serif;
+    padding:2em 0;
+}
+.menu-icon{
+    display: block;
+    cursor: pointer;
+}
+.menu-icon i{
+    font-size: 1.2rem ;
+    color: #222;
+}
+}
